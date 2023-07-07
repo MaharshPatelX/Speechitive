@@ -1,0 +1,61 @@
+{% extends "head_foot.html" %}
+{% block body %}
+
+
+
+<div class="content-wrap">
+  <div class="container py-7">
+    <div class="row gy-6 gx-6">
+      <div class="col-12 col-xl">
+        <div class="flq-post-content flq-vertical-rhythm">
+          
+
+
+          
+
+
+        {% for dt in data %}
+        
+          <div class="flq-post-author" data-sr data-sr-distance="10" data-sr-duration="1000">
+          	<a href="/video?data={{dt['vid']}}">
+            <div class="flq-post-author-head">
+              <div class="flq-media">
+                <img src="{{ url_for('static', filename='output/'+dt['new_name']+'/thum/1.png') }}" height="80" width="130" style="margin-right: 20px;">
+                <div class="flq-media-meta">
+                  <h5 class="flq-media-title">{{ dt['old_name'] }}</h5>
+                  <div class="flq-meta">
+                    <ul>
+                      <li>Size : {{ dt['video_size'] }} MB</li>
+                      <li>Length : {{ dt['video_lenth'] }} sec</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flq-social flq-social-sm">
+                <a href="/analytics?data={{dt['vid']}}" style="margin-right: 10px;">analytics</a>
+                <a href="/wordcloud?data={{dt['vid']}}" style="margin-left: 10px;">word cloud</a>
+              </div>
+            </div>
+            </a>
+          </div>
+
+        {% endfor %}
+
+
+
+
+
+
+
+
+          
+          
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "head_foot.html" %}
+{% block body %}
+
+
+    <div class="py-7 min-vh-100 flq-background d-flex align-items-center">
+      <div class="flq-background-image">
+        <span class="flq-image jarallax" data-speed="0.7">
+          <img src="{{ url_for('static', filename='output/'+data['new_name']+'/thum/1.png') }}" class="jarallax-img" alt="" />
+        </span>
+      </div>
+      <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8);"></div>
+      <div class="container pt-navbar">
+        <div class="row gy-6 gx-6">
+
+
+
+
+
+          <div class="col-12 col-lg-7 col-xxl-8" data-sr="actor" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+            <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">{{data['old_name']}}</span>
+            <h1 class="h2 mb-5" data-sr-item="actor">NLU Analysis Report</h1>
+            
+            <h2 class="h5 mb-4" data-sr-item="actor">Category: &nbsp;<small>{{nlu['category']['label']}} <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor"><b>{{nlu['category']['score']}}</b></span></small></h2>
+            
+
+            <h2 class="h5 mb-4" data-sr-item="actor">Entity: &nbsp;<small>{{nlu['entity']['type']}}, {{nlu['entity']['text']}} <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor"><b>{{nlu['entity']['relevance']}}</b></span></small></h2>
+            
+
+            <h2 class="h5 mb-4" data-sr-item="actor">Concept Tags: &nbsp;</h2>
+            <table class="table table-borderless flq-color-opacity" data-sr-item="actor">
+              <tbody>
+
+                {% for i in nlu['concepts'] %}
+                  <tr>
+                  <td class="flq-color-meta">{{i['text']}}</td>
+                  <td>{{i['relevance']}}</td>
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+
+            <br>
+            <br>
+
+            <h2 class="h5 mb-4" data-sr-item="actor">Keywords, Sentiments and Emotions: &nbsp;</h2>
+            <table class="table table-borderless flq-color-opacity" data-sr-item="actor">
+              <tbody>
+
+                {% for i in nlu['sentiments'] %}
+                  <tr>
+                  <td class="flq-color-meta">{{i['keyword']}}</td>
+                  <td>{{i['sentiment']}}</td>
+                  <td>{{i['emotion']}}</td>
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+
+            <br><br>
+
+            <!-- <h2 class="h5 mb-4" data-sr-item="actor">Word Clouds: &nbsp;</h2> -->
+
+            <!-- <div class="col-6 col-lg-3 col-xxl-2" data-sr="actor-image" data-sr-interval="80" data-sr-delay="100" data-sr-duration="1000" data-sr-distance="10">
+              <center><span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">Nouns Adjectives</span></center>                           
+              <img style="margin-top: 7px;" src="{{ url_for('static', filename='output/'+data['new_name']+'/img/nouns_adjectives.png') }}">
+            </div>
+
+
+            <br>
+
+
+            <div class="col-6 col-lg-3 col-xxl-2" data-sr="actor-image" data-sr-interval="80" data-sr-delay="100" data-sr-duration="1000" data-sr-distance="10">
+              <center><span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">Verbs</span></center>
+              <img style="margin-top: 7px;" src="{{ url_for('static', filename='output/'+data['new_name']+'/img/verbs.png') }}">
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

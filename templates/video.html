@@ -1,0 +1,61 @@
+{% extends "head_foot.html" %}
+{% block body %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<script src="{{ url_for('static', filename='fliqs/assets/vendor/hls.js') }}"></script>
+<center>
+<video height="600" id="video" controls></video>
+</center>
+<script>
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null) {
+       return null;
+    }
+    return decodeURI(results[1]) || 0;
+}
+var new_f;
+$( document ).ready(function() {
+  // console.log($.urlParam('data'));
+new_f = $.ajax({
+        url: "/datatojson?data="+$.urlParam('data'),
+        type: 'GET',
+        dataType: 'json', // added data type
+        success: function(res) {
+            play_(res.message.new_name);
+        }
+});
+});
+function play_(new_f){
+      var link_url = '/static/hls/'+new_f+'/playlist.m3u8';
+      console.log(new_f);
+      var video = document.getElementById('video');
+      if (Hls.isSupported()) {
+        var hls = new Hls({
+          debug: true,
+        });
+        hls.loadSource(link_url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+          // video.muted = true;
+          video.play();
+        });
+      }
+
+
+      else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = link_url;
+        video.addEventListener('canplay', function () {
+          video.play();
+        });
+      }
+
+}
+    </script>
+
+
+{% endblock %}

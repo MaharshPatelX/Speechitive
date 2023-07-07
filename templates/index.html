@@ -1,0 +1,183 @@
+{% extends "head_foot.html" %}
+{% block body %}
+
+
+
+
+
+
+
+
+<div class="content-wrap">
+<div class="min-vh-100 flq-background flq-background-move">
+<div class="flq-background-image">
+<span class="flq-image">
+<img src="{{ url_for('static', filename='fliqs/assets/images/404.jpg') }}" alt="">
+</span>
+</div>
+<div class="flq-background-overlay" style="background-color: rgba(19, 23, 34, 0.5);"></div>
+<div class="d-flex flex-column min-vh-100">
+<div class="container flex-grow-1 pt-navbar my-7 d-flex align-items-center">
+<div class="text-center flq-vertical-rhythm w-100" data-sr="page-404" data-sr-delay="100" data-sr-interval="100" data-sr-duration="1300" data-sr-distance="10">
+
+<div>
+<!-- <h2 class="h3 mb-1" data-sr-item="page-404">Speechitive</h2> -->
+<!-- <p data-sr-item="page-404">Make sea thing face, over isn't which. Moving spirit won't.</p> -->
+</div>
+<!-- ------------------------------------------------------------------------------------------- -->
+<style type="text/css">
+.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
+.input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.btn-file{overflow:hidden;position:relative;vertical-align:middle;}.btn-file>input{position:absolute;top:0;right:0;margin:0;opacity:0;filter:alpha(opacity=0);transform:translate(-300px, 0) scale(4);font-size:23px;direction:ltr;cursor:pointer;}
+.fileupload{margin-bottom:9px;}.fileupload .uneditable-input{display:inline-block;margin-bottom:0px;vertical-align:middle;cursor:text;}
+.fileupload .thumbnail{overflow:hidden;display:inline-block;margin-bottom:5px;vertical-align:middle;text-align:center;}.fileupload .thumbnail>img{display:inline-block;vertical-align:middle;max-height:100%;}
+.fileupload .btn{vertical-align:middle;}
+.fileupload-exists .fileupload-new,.fileupload-new .fileupload-exists{display:none;}
+.fileupload-inline .fileupload-controls{display:inline;}
+.fileupload-new .input-append .btn-file{-webkit-border-radius:0 3px 3px 0;-moz-border-radius:0 3px 3px 0;border-radius:0 3px 3px 0;}
+.thumbnail-borderless .thumbnail{border:none;padding:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+.fileupload-new.thumbnail-borderless .thumbnail{border:1px solid #ddd;}
+.control-group.warning .fileupload .uneditable-input{color:#a47e3c;border-color:#a47e3c;}
+.control-group.warning .fileupload .fileupload-preview{color:#a47e3c;}
+.control-group.warning .fileupload .thumbnail{border-color:#a47e3c;}
+.control-group.error .fileupload .uneditable-input{color:#b94a48;border-color:#b94a48;}
+.control-group.error .fileupload .fileupload-preview{color:#b94a48;}
+.control-group.error .fileupload .thumbnail{border-color:#b94a48;}
+.control-group.success .fileupload .uneditable-input{color:#468847;border-color:#468847;}
+.control-group.success .fileupload .fileupload-preview{color:#468847;}
+.control-group.success .fileupload .thumbnail{border-color:#468847;}
+</style>
+
+<script type="text/javascript">
+	
+	!function(e){var t=function(t,n){this.$element=e(t),this.type=this.$element.data("uploadtype")||(this.$element.find(".thumbnail").length>0?"image":"file"),this.$input=this.$element.find(":file");if(this.$input.length===0)return;this.name=this.$input.attr("name")||n.name,this.$hidden=this.$element.find('input[type=hidden][name="'+this.name+'"]'),this.$hidden.length===0&&(this.$hidden=e('<input type="hidden" />'),this.$element.prepend(this.$hidden)),this.$preview=this.$element.find(".fileupload-preview");var r=this.$preview.css("height");this.$preview.css("display")!="inline"&&r!="0px"&&r!="none"&&this.$preview.css("line-height",r),this.original={exists:this.$element.hasClass("fileupload-exists"),preview:this.$preview.html(),hiddenVal:this.$hidden.val()},this.$remove=this.$element.find('[data-dismiss="fileupload"]'),this.$element.find('[data-trigger="fileupload"]').on("click.fileupload",e.proxy(this.trigger,this)),this.listen()};t.prototype={listen:function(){this.$input.on("change.fileupload",e.proxy(this.change,this)),e(this.$input[0].form).on("reset.fileupload",e.proxy(this.reset,this)),this.$remove&&this.$remove.on("click.fileupload",e.proxy(this.clear,this))},change:function(e,t){if(t==="clear")return;var n=e.target.files!==undefined?e.target.files[0]:e.target.value?{name:e.target.value.replace(/^.+\\/,"")}:null;if(!n){this.clear();return}this.$hidden.val(""),this.$hidden.attr("name",""),this.$input.attr("name",this.name);if(this.type==="image"&&this.$preview.length>0&&(typeof n.type!="undefined"?n.type.match("image.*"):n.name.match(/\.(gif|png|jpe?g)$/i))&&typeof FileReader!="undefined"){var r=new FileReader,i=this.$preview,s=this.$element;r.onload=function(e){i.html('<img src="'+e.target.result+'" '+(i.css("max-height")!="none"?'style="max-height: '+i.css("max-height")+';"':"")+" />"),s.addClass("fileupload-exists").removeClass("fileupload-new")},r.readAsDataURL(n)}else this.$preview.text(n.name),this.$element.addClass("fileupload-exists").removeClass("fileupload-new")},clear:function(e){this.$hidden.val(""),this.$hidden.attr("name",this.name),this.$input.attr("name","");if(navigator.userAgent.match(/msie/i)){var t=this.$input.clone(!0);this.$input.after(t),this.$input.remove(),this.$input=t}else this.$input.val("");this.$preview.html(""),this.$element.addClass("fileupload-new").removeClass("fileupload-exists"),e&&(this.$input.trigger("change",["clear"]),e.preventDefault())},reset:function(e){this.clear(),this.$hidden.val(this.original.hiddenVal),this.$preview.html(this.original.preview),this.original.exists?this.$element.addClass("fileupload-exists").removeClass("fileupload-new"):this.$element.addClass("fileupload-new").removeClass("fileupload-exists")},trigger:function(e){this.$input.trigger("click"),e.preventDefault()}},e.fn.fileupload=function(n){return this.each(function(){var r=e(this),i=r.data("fileupload");i||r.data("fileupload",i=new t(this,n)),typeof n=="string"&&i[n]()})},e.fn.fileupload.Constructor=t,e(document).on("click.fileupload.data-api",'[data-provides="fileupload"]',function(t){var n=e(this);if(n.data("fileupload"))return;n.fileupload(n.data());var r=e(t.target).closest('[data-dismiss="fileupload"],[data-trigger="fileupload"]');r.length>0&&(r.trigger("click.fileupload"),t.preventDefault())})}(window.jQuery)
+
+</script>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+	<form method="post" action="/" enctype = "multipart/form-data" id='formId'>
+		<!-- <input type="file" class="btn mt-0" name="file"> -->
+
+<!-- <div class="btn btn-lg btn-white btn-brand-hover btn-block"> -->
+  <div class="fileupload fileupload-new" data-provides="fileupload">
+    <span class="btn btn-primary btn-file">
+    	<span class="fileupload-new">Upload file</span>
+    	<span class="fileupload-exists">Change</span>
+    	<input type="file" id="file" name="file" /></span>
+    	<span class="fileupload-preview"></span>
+    	<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none;">x</a>
+  </div>
+<!-- </div> -->
+
+		<br>
+		<br>
+		<!-- <a class="btn mt-0" onClick='submitDetailsForm()'>Upload</a> -->
+	</form>
+
+<script language="javascript" type="text/javascript">
+	$("#file").change(function() {
+    // $("#title").val("Changed!");
+    $("#formId").submit();
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+<div class="container-fluid pb-4">
+<div class="row gy-4 justify-content-between" data-sr="footer-copyright" data-sr-interval="100" data-sr-delay="200" data-sr-duration="1000" data-sr-distance="10">
+<div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
+</div>
+<div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
+<div class="flq-social text-center">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flq-navbar-icons">
+<ul>
+<li>
+<a href="index-2.html" class="btn btn-link btn-icon-md">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 12H9V22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0392 3 20.5305 3 20V9.9782C3 9.36102 3.28495 8.77841 3.77212 8.39949L10.7721 2.95505C11.4943 2.39332 12.5057 2.39332 13.2279 2.95505L20.2279 8.39949C20.7151 8.77841 21 9.36102 21 9.9782V20C21 20.5305 20.7893 21.0392 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H15V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</a>
+</li>
+<li>
+<button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_search" data-base-class="flq-fancybox-search" data-animation-duration="1000" data-keyboard="false" data-auto-focus="true" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03325 14.1334 2.75 10.0833 2.75C6.03325 2.75 2.75 6.03325 2.75 10.0833C2.75 14.1334 6.03325 17.4167 10.0833 17.4167Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M19.25 19.25L15.2625 15.2625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</button>
+</li>
+<li>
+<button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_user" data-base-class="flq-fancybox-navbar" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.4999 21.1422C17.888 20.8923 18.9884 20.5116 19.5 20C19.5718 19.3531 19.5 18.3333 19.5 18.3333C19.5 17.4493 19.0785 16.6014 18.3284 15.9763C15.9594 14.0022 8.04049 14.0022 5.67154 15.9763C4.92139 16.6014 4.49996 17.4493 4.49996 18.3333C4.49996 18.3333 4.42809 19.3531 4.49996 20C5.01153 20.5116 6.11194 20.8923 7.49996 21.1422M16 7C16 9.20914 14.2091 11 12 11C9.79082 11 7.99996 9.20914 7.99996 7C7.99996 4.79086 9.79082 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</button>
+</li>
+<li>
+<button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 17L15 12M15 12L10 7M15 12H3M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</button>
+</li>
+<li class="d-flex align-items-center">
+<div class="flq-scroll-top-wrapper">
+<a class="flq-scroll-top-button flq-anchor" href="#page">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</a>
+<div class="flq-scroll-progress flq-scroll-progress-circle">
+<svg>
+<circle stroke="currentColor" r="0" fill="none" />
+</svg>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+
+<div class="flq-scroll-top-wrapper">
+<a class="flq-scroll-top-button flq-anchor" href="#page">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</a>
+<div class="flq-scroll-progress flq-scroll-progress-circle">
+<svg>
+<circle stroke="currentColor" r="0" fill="none" />
+</svg>
+</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

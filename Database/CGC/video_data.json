@@ -1,0 +1,40 @@
+[
+    {
+        "_id": {
+            "$oid": "6378e9e4a1370c9a5fae881a"
+        },
+        "vid": 1,
+        "new_name": "1.mp4",
+        "old_name": "PlainandSimpleEstimators.mp4",
+        "store_location": "static/up_videos/",
+        "video_lenth": "346.554542",
+        "video_size": 22.412517547607422,
+        "change": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "fol": 1,
+        "thum": 1
+    },
+    {
+        "_id": {
+            "$oid": "6422d2c989dd6c61099983dc"
+        },
+        "vid": 2,
+        "new_name": "2.mp4",
+        "old_name": "a.mp4",
+        "store_location": "skylearn/static/up_videos/",
+        "video_lenth": "522.955767",
+        "video_size": 29.467927932739258,
+        "change": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "fol": 0,
+        "thum": 0
+    }
+]

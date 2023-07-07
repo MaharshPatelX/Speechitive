@@ -1,0 +1,168 @@
+{% extends "head_foot.html" %}
+{% block body %}
+
+
+
+<div class="content-wrap">
+  <div class="container py-7">
+    <div class="row gy-6 gx-6">
+      <div class="col-12 col-xl">
+        <div class="flq-post-content flq-vertical-rhythm">
+          
+
+
+          <div class="flq-post-author" data-sr data-sr-distance="10" data-sr-duration="1000">
+            <div class="flq-post-author-head">
+              <div class="flq-media">
+               <!--  <div class="flq-media-image">
+                  <span class="flq-image">
+                    <img src="{{ url_for('static', filename='fliqs/assets/images/user-160x160.jpg') }}" alt="">
+                  </span>
+                </div> -->
+                <div class="flq-media-meta">
+                  <h5 class="flq-media-title">Name : {{ data['old_name'] }}</h5>
+                  <div class="flq-meta">
+                    <ul>
+                      <li>Size : {{ data['video_size'] }} MB</li>
+                      <li>Length : {{ data['video_lenth'] }} sec</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flq-social flq-social-sm">
+                
+              </div>
+            </div>
+            <div class="flq-post-author-body">
+
+
+
+
+
+				<p style='font-size: 14px;'><b>Video to Text</b>:  
+					<p style='font-size: 13px;' id='vtt_pp'></p>
+				</p>
+				<br>
+				<p style='font-size: 14px;'><b>Video to M3U8</b>:  
+					<p style='font-size: 13px;' id='vtm_pp'></p>
+				</p>
+				<br>
+				<p style='font-size: 14px;'><b>M3U8 to Playlist-file</b>:  
+					<p style='font-size: 13px;' id='mtp_pp'></p>
+				</p>
+				<br>
+				<p style='font-size: 14px;'><b>Text to Analytics</b>:  
+					<p style='font-size: 13px;' id='tta_pp'></p>
+				</p>
+
+<div id='tst_div'>
+  
+</div>
+
+
+              
+            </div>
+          </div>
+
+
+<!-- Completed..! -->
+<!-- Processing... -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--suppress JSUnresolvedLibraryURL -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!--suppress JSUnresolvedLibraryURL -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+    	var tl = "/process-data?data="+{{data['vid']}};
+        const source = new EventSource(tl);
+        source.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            console.log(data.change);
+
+            var flg = 0;
+
+            if (data.change[1] == 1)
+            {
+              $("#vtt_pp").empty();
+              $("#vtt_pp").append('Completed..!');
+              flg=flg+1;
+            }
+            else
+            {
+              $("#vtt_pp").empty();
+              $("#vtt_pp").append('Processing...');
+            }
+
+
+            if (data.change[0] == 1)
+            {
+              $("#vtm_pp").empty();
+              $("#vtm_pp").append('Completed..!');
+              flg=flg+1;
+            }
+            else
+            {
+              $("#vtm_pp").empty();
+              $("#vtm_pp").append('Processing...');
+            }
+
+            
+            if (data.change[3] == 1)
+            {
+              $("#mtp_pp").empty();
+              $("#mtp_pp").append('Completed..!');
+              flg=flg+1;
+            }
+            else
+            {
+              $("#mtp_pp").empty();
+              $("#mtp_pp").append('Processing...');
+            }
+
+
+            if (data.change[2] == 1)
+            {
+              $("#tta_pp").empty();
+              $("#tta_pp").append('Completed..!');
+              flg=flg+1;
+            }
+            else
+            {
+              $("#tta_pp").empty();
+              $("#tta_pp").append('Processing...');
+            }
+
+            if (flg==4)
+            {
+              // tst_div
+              $.urlParam = function(name){
+                  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                  if (results==null) {
+                     return null;
+                  }
+                  return decodeURI(results[1]) || 0;
+              }
+              $("#tst_div").empty();
+              $("#tst_div").append("<br><br><div class='d-flex align-items-center ms-4 d-none d-sm-flex'><a href='/video?data="+$.urlParam('data')+"' style='margin-left:-2.5%;' class='btn btn-xs btn-outline btn-white d-none d-md-flex'>View</a></div>");
+            }
+            
+        }
+    });
+</script>
+
+
+          
+          
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+{% endblock %}
