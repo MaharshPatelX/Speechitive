@@ -34,7 +34,7 @@ def wavConversion(targetFile):
 
 
 def SpeechToText_API():
-	apikey = 'Hq9jyX1bxjpQoUccv2ukbMQ5aAZCUO0F5QEQdw1DUs-9'
+	apikey = 'Your-Api-Key'
 	url = 'https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/ed949167-86b1-4f74-8280-f9c625390985'
 
 	# SpeechToText
