@@ -25,7 +25,7 @@ path_store = fil_path.replace('up_videos','output')
 path2_s = path_store.replace('output','hls')
 
 
-apikey = 'lZ3eAWBsm-578AqHJ-4WwAyjYQTo0qq88ybaMrXkIJWT'
+apikey = 'Your-API-Key'
 url = 'https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/bcc8c7cc-7256-4b3d-a66e-a7cfcbe7ce66'
 
 # Natural Language Understanding
