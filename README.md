@@ -86,4 +86,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [language-shield]: https://img.shields.io/github/languages/count/MaharshPatelX/Speechitive?style=for-the-badge
 [language-url]: #
 
-[product-screenshot]: Media/Home.PNG
+[product-screenshot]: Media/Home.png
