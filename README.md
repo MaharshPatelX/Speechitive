@@ -51,13 +51,13 @@ Make sure that you have the following:
 ## Demo
 <p align="left">
   <a class="image fit"><b>Analytics</b>
-  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/Analytics-Video.png" alt="">
+  	<img src="https://github.com/MaharshPatelX/Speechitive/blob/main/Media/Analytics-Video.png" alt="">
   </a>
 </p>
 <br>
 <p align="left">
     <a class="image fit"><b>Wordcloud</b>
-  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/Wordcloud-Video.png" alt="">
+  	<img src="https://github.com/MaharshPatelX/Speechitive/blob/main/Media/Wordcloud-Video.png" alt="">
   </a>
 </p>
 
@@ -71,7 +71,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/deep-karia-2436b2194/ -->
 
-[contri-shield]: https://img.shields.io/github/contributors/MaharshPatelX/Speechitive?style=for-the-badge
+[contri-shield]: https://img.shields.io/github/contributors-anon/MaharshPatelX/Speechitive?style=for-the-badge
 [contri-url]: #
 
 [license-shield]: https://img.shields.io/github/license/MaharshPatelX/Speechitive?style=for-the-badge
@@ -86,4 +86,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [language-shield]: https://img.shields.io/github/languages/count/MaharshPatelX/Speechitive?style=for-the-badge
 [language-url]: #
 
-[product-screenshot]: Media/Home.PNG
+[product-screenshot]: Media/Home.png
