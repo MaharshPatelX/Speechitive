@@ -71,7 +71,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/deep-karia-2436b2194/ -->
 
-[contri-shield]: https://img.shields.io/github/contributors/MaharshPatelX/Speechitive?style=for-the-badge
+[contri-shield]: https://img.shields.io/github/contributors-anon/MaharshPatelX/Speechitive?style=for-the-badge
 [contri-url]: #
 
 [license-shield]: https://img.shields.io/github/license/MaharshPatelX/Speechitive?style=for-the-badge
