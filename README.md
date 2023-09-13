@@ -1,7 +1,7 @@
 
 <br />
 <div align="center">
-<h1 align="center">Speechitive-ABCD</h3>
+<h1 align="center">Speechitive</h3>
 
 [![MIT License][license-shield]][license-url]
 [![Languages][language-shield]][language-url]
@@ -50,14 +50,14 @@ Make sure that you have the following:
 
 ## Demo
 <p align="left">
-  <a class="image fit"><b>Logistic Regression</b>
-  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/DASS_Prediction_Logistic_Regression.png" alt="">
+  <a class="image fit"><b>Analytics</b>
+  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/Analytics-Video.png" alt="">
   </a>
 </p>
 <br>
 <p align="left">
-    <a class="image fit"><b>Random Forest</b>
-  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/DASS_Prediction_Random_Forest.png" alt="">
+    <a class="image fit"><b>Wordcloud</b>
+  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/Wordcloud-Video.png" alt="">
   </a>
 </p>
 
