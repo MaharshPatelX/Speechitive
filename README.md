@@ -51,13 +51,13 @@ Make sure that you have the following:
 ## Demo
 <p align="left">
   <a class="image fit"><b>Analytics</b>
-  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/Analytics-Video.png" alt="">
+  	<img src="https://github.com/MaharshPatelX/Speechitive/blob/main/Media/Analytics-Video.png" alt="">
   </a>
 </p>
 <br>
 <p align="left">
     <a class="image fit"><b>Wordcloud</b>
-  	<img src="https://github.com/DeepKariaX/DASS-Prediction-IBM-SPSS-Modeler/blob/main/Prediction/Wordcloud-Video.png" alt="">
+  	<img src="https://github.com/MaharshPatelX/Speechitive/blob/main/Media/Wordcloud-Video.png" alt="">
   </a>
 </p>
 
